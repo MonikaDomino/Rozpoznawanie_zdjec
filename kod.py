@@ -55,7 +55,7 @@ data_val = dataG_val.flow_from_directory(directory="train2",
                                          target_size=(220, 220),
                                          batch_size=2,
                                          )
-print(data_val.class_indices)
+#print(data_val.class_indices)
 
 # tworzymy wizualizację zdjęć w treningowym generatorze danych
 
@@ -104,6 +104,7 @@ hist = modelG.fit(data_train,
 modelG = load_model("./best_model.h5")
 
 h = hist.history
+print(h['accuracy'])
 
 # podsumowanie na wykresie przebiegu trenowania modelu dla dokładności dopasowania
 
